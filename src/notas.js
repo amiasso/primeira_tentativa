@@ -1,23 +1,39 @@
-const alunos = ['gustavo', 'julia', 'paula ', 'wagner'];
 
-const aluno2 = alunos.map(function(itemAtual){
-    return {
+
+
+
+
+
+
+
+
+
+const alunos = ["a", "b", "c", "d"]
+const notas = [4, 5, 6, 3]
+
+const alunos2 = alunos.map((itemAtual)=> {
+    return  {
         nome: itemAtual,
-        curso: 'frontend',
     }
-   
+    
 })
 
-const nums = [6]
+const notas2 = notas.map((notasAtual)=>{
+    return  {
+        notas: notasAtual
+    }
+})
 
-const nota = nums.reduce(function(acumulador, itemAtual){
-    acumulador += itemAtual;
-    return acumulador
-}, 0)
-console.log(nota)
+console.log(alunos2)
+console.log(notas2)
 
-const nomesDosAlunos = aluno2.reduce(function(acumulador, itemAtual) {
-    acumulador += `${itemAtual.nome} `;
-    return acumulador
-}, '')
-console.log(nomesDosAlunos)
+const c = alunos2.find( function(item){
+    return item.nome == "c"
+})
+
+const n = notas2.find(function (item1){
+   return item1.notas == 6
+})
+console.log(c)
+console.log(n)
+ 
